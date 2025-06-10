@@ -12,4 +12,5 @@
         @include('partials.section_blogs')
         {{-- the footer is insid the layouts.guest --}}
     </div>
+    <!-- test push -->
 @endsection

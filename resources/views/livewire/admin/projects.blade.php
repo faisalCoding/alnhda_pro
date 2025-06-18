@@ -14,9 +14,12 @@ use Livewire\Volt\Component;
 new #[Layout('components.layouts.auth')] class extends Component {
 public $faisal_name = "faisal bakhsh";
 
+
+
 } ?>
 
 <div class="flex flex-col gap-6">
     
+    <input type="text" wire:model="faisal_name">
     {{$faisal_name}}
 </div>

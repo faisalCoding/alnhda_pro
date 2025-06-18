@@ -1,63 +1,22 @@
-<div
-        class="container m-auto  w-full flex flex-wrap text-center flex-col gap-3 md:flex-row-reverse  md:items-stretch xl:justify-start ">
+<?php
 
-        @foreach (App\Models\Project::get() as $project)
-            <div class="flex flex-col items-center bg-white overflow-hidden md:w-[465px]  rounded-[40px]">
-                <img class="w-full h-72 object-cover" src="/storage/{{ $project->image_url }}" alt="">
-                <h1 class="text-2xl mx-2.5 mt-5">{{ $project->name }}</h1>
-                <p class=" text-gray-500 text-lg mt-3.5 w-10/12">{{ $project->description }}</p>
-                <div class="flex flex-col font-bold items-stretch w-10/12 pt-7">
-                    <div class="flex flex-row-reverse py-2">
-                        <p class="text-lg">عدد الوحدات</p>
-                        <p class="text-lg text-[#498E49] pr-10 font-medium">
-                            {{ $project->properties()->count() }}</p>
-                    </div>
-                    <div class="flex flex-row-reverse py-2">
-                        <p class="text-lg">حالة المشروع</p>
-                        <p class="text-lg text-[#498E49] pr-10 font-medium">{{ $project->status }}</p>
-                    </div>
-                    <div class="flex flex-row-reverse py-2">
-                        <p class="text-lg">نوع المشروع</p>
-                        <p class="text-lg text-[#498E49] pr-10 font-medium">{{ $project->project_type }}</p>
-                    </div>
-                    <div class="flex flex-row-reverse py-2">
-                        <p class="text-lg">موقع المشروع</p>
-                        <p class="text-lg  text-[#498E49] pr-10 font-medium">مدينة جدة {{ $project->location }}
-                        </p>
-                    </div>
-                </div>
-                <button onclick="navigateTo('{{route('project', $project->id)}}');"
-                    class=" fill-btn">احجز
-                    الان</button>
-            </div>
-        @endforeach
-        <div class="flex flex-col items-center bg-white overflow-hidden md:w-[465px]  rounded-[40px]">
-            <img class="w-full h-72 object-cover" src="/storage/{{ $project->image_url }}" alt="">
-            <h1 class="text-2xl mx-2.5 mt-5">{{ $project->name }}</h1>
-            <p class=" text-gray-500 text-lg mt-3.5 w-10/12">{{ $project->description }}</p>
-            <div class="flex flex-col font-bold items-stretch w-10/12 pt-7">
-                <div class="flex flex-row-reverse py-2">
-                    <p class="text-lg">عدد الوحدات</p>
-                    <p class="text-lg text-[#498E49] pr-10 font-medium">
-                        {{ $project->properties()->count() }}</p>
-                </div>
-                <div class="flex flex-row-reverse py-2">
-                    <p class="text-lg">حالة المشروع</p>
-                    <p class="text-lg text-[#498E49] pr-10 font-medium">{{ $project->status }}</p>
-                </div>
-                <div class="flex flex-row-reverse py-2">
-                    <p class="text-lg">نوع المشروع</p>
-                    <p class="text-lg text-[#498E49] pr-10 font-medium">{{ $project->project_type }}</p>
-                </div>
-                <div class="flex flex-row-reverse py-2">
-                    <p class="text-lg">موقع المشروع</p>
-                    <p class="text-lg  text-[#498E49] pr-10 font-medium">مدينة جدة {{ $project->location }}
-                    </p>
-                </div>
-            </div>
-            <button onclick="navigateTo('{{route('project', $project->id)}}');"
-                class=" fill-btn">احجز
-                الان</button>
-        </div>
+use Illuminate\Auth\Events\Lockout;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\RateLimiter;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Str;
+use Illuminate\Validation\ValidationException;
+use Livewire\Attributes\Layout;
+use Livewire\Attributes\Validate;
+use Livewire\Volt\Component;
 
-    </div>
+new #[Layout('components.layouts.auth')] class extends Component {
+public $faisal_name = "faisal bakhsh";
+
+} ?>
+
+<div class="flex flex-col gap-6">
+    
+    {{$faisal_name}}
+</div>

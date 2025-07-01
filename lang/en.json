@@ -1,0 +1,32 @@
+{
+
+        "switch": "Switch Language",
+        "ar": "Arabic",
+        "en": "English",
+
+
+        "home": "Home",
+        "projects": "Projects",
+        "blogs": "Blogs",
+        "logout": "Logout",
+
+
+        "already_have_account": "Already have an account?",
+        "log_in": "Log in",
+        "create_admin_account": "Create an Admin account",
+        "enter_details": "Enter your details below to create your account",
+        "admin_login": "Admin Login",
+        "enter_credentials": "Enter your email and password below to log in",
+        "name": "Name",
+        "full_name": "Full name",
+        "email_address": "Email address",
+        "confirm_password": "Confirm password",
+        "forgot_password": "Forgot your password?",
+        "remember_me": "Remember me",
+        "sign_up": "Sign up",
+        "dont_have_account": "Don't have an account?",
+        "profile": "Profile",
+        "password": "Password",
+        "appearance": "Appearance"
+
+}
